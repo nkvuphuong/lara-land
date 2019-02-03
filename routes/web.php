@@ -11,17 +11,15 @@
 |
 */
 
-
 /**
  * ADMIN CONTROL PANEL
  */
-
-Route::group(['as' => config('app.admin.route.as'), 'namespace' => config('app.admin.route.namespace'), 'prefix' => config('app.admin.route.prefix'), 'middleware' => ['guest']], function() {
+Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', 'middleware' => ['guest']], function() {
     Route::get('/login', 'AuthController@login')->name('login');
     Route::post('/login', 'AuthController@loginDo');
 });
 
-Route::group(['as' => config('app.admin.route.as'), 'namespace' => config('app.admin.route.namespace'), 'prefix' => config('app.admin.route.prefix')], function() {
+Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp'], function() {
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 

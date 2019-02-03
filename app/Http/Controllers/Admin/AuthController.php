@@ -18,7 +18,7 @@ class AuthController extends Controller
         $validData = $request->validated();
 
         if (auth('admin')->attempt($validData)) {
-            return route('admin.dashboard');
+            return redirect()->route('admin.dashboard');
         } else {
             return back()->withErrors('Username or password is invalid');
         }
@@ -27,7 +27,7 @@ class AuthController extends Controller
     public function logout()
     {
         if (auth('admin')->logout()) {
-            return route('admin.login');
+            return redirect()->route('admin.login');
         } else {
             return back()->withErrors('Logout failed !');
         }

@@ -19,7 +19,7 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
     Route::post('/login', 'AuthController@loginDo');
 });
 
-Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp'], function() {
+Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', 'middleware' => ['auth:admin']], function() {
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::get('/logout', 'AuthController@logout')->name('logout');
 

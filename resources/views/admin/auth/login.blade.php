@@ -5,12 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Login</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/admin/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="/admin/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="/admin/libs/css/style.css">
-    <link rel="stylesheet" href="/admin/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="{{ asset('/admin/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link href="{{ asset('/admin/vendor/fonts/circular-std/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/admin/libs/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/admin/vendor/fonts/fontawesome/css/fontawesome-all.css') }}">
     <style>
         html,
         body {
@@ -33,15 +34,24 @@
 <!-- login page  -->
 <!-- ============================================================== -->
 <div class="splash-container">
-    <div class="card ">
-        <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="/admin/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>
+    @include('admin.layouts.errors')
+    <div class="card">
+        <div class="card-header text-center">
+            <a href="../index.html">
+                <img class="logo-img" src="/admin/images/logo.png" alt="logo">
+            </a>
+            <span class="splash-description">Please enter your user information.</span>
+        </div>
         <div class="card-body">
-            <form>
+            <form method="post" action="{{ route('admin.login') }}">
+                {{csrf_field()}}
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                    <input class="form-control form-control-lg" id="email" name="email" type="text"
+                           placeholder="Username" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                    <input class="form-control form-control-lg" id="password" name="password" type="password"
+                           placeholder="Password">
                 </div>
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
@@ -65,8 +75,8 @@
 <!-- end login page  -->
 <!-- ============================================================== -->
 <!-- Optional JavaScript -->
-<script src="/admin/vendor/jquery/jquery-3.3.1.min.js"></script>
-<script src="/admin/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="{{ asset('/admin/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('/admin/vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
 
 </html>

@@ -21,8 +21,6 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
 
 Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp'], function() {
     Route::get('/', 'DashboardController@index')->name('dashboard');
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
     Route::get('/logout', 'AuthController@logout')->name('logout');
 
     //Post categories

@@ -228,4 +228,13 @@ return [
 
     ],
 
+    //Customize config
+    'admin' => [
+        'route' => [
+            'as' => 'admin.',
+            'prefix' => 'admincp',
+            'namespace' => 'Admin'
+        ],
+    ],
+
 ];

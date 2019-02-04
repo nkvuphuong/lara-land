@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.24 on 2019-02-04 19:54:16.
+ * Generated for Laravel 5.7.24 on 2019-02-04 23:37:38.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -15502,102 +15502,6 @@ namespace Intervention\Image\Facades {
  
 }
 
-namespace Lavary\Menu { 
-
-    /**
-     * 
-     *
-     */ 
-    class Facade {
-        
-        /**
-         * Check if a menu builder exists.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function exists($name)
-        {
-            return \Lavary\Menu\Menu::exists($name);
-        }
-        
-        /**
-         * Create a new menu builder instance.
-         *
-         * @param string $name
-         * @param callable $callback
-         * @return \Lavary\Menu\Builder 
-         * @static 
-         */ 
-        public static function makeOnce($name, $callback)
-        {
-            return \Lavary\Menu\Menu::makeOnce($name, $callback);
-        }
-        
-        /**
-         * Create a new menu builder instance.
-         *
-         * @param string $name
-         * @param callable $callback
-         * @return \Lavary\Menu\Builder 
-         * @static 
-         */ 
-        public static function make($name, $callback)
-        {
-            return \Lavary\Menu\Menu::make($name, $callback);
-        }
-        
-        /**
-         * Loads and merges configuration data.
-         *
-         * @param string $name
-         * @return array 
-         * @static 
-         */ 
-        public static function loadConf($name)
-        {
-            return \Lavary\Menu\Menu::loadConf($name);
-        }
-        
-        /**
-         * Return Menu builder instance from the collection by key.
-         *
-         * @param string $key
-         * @return \Lavary\Menu\Builder 
-         * @static 
-         */ 
-        public static function get($key)
-        {
-            return \Lavary\Menu\Menu::get($key);
-        }
-        
-        /**
-         * Return Menu builder collection.
-         *
-         * @return \Illuminate\Support\Collection 
-         * @static 
-         */ 
-        public static function getCollection()
-        {
-            return \Lavary\Menu\Menu::getCollection();
-        }
-        
-        /**
-         * Alias for getCollection.
-         *
-         * @return \Illuminate\Support\Collection 
-         * @static 
-         */ 
-        public static function all()
-        {
-            return \Lavary\Menu\Menu::all();
-        }
-         
-    }
- 
-}
-
 namespace Proengsoft\JsValidation\Facades { 
 
     /**
@@ -18097,8 +18001,6 @@ namespace  {
     class Breadcrumbs extends \DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs {}
 
     class Image extends \Intervention\Image\Facades\Image {}
-
-    class Menu extends \Lavary\Menu\Facade {}
 
     class JsValidator extends \Proengsoft\JsValidation\Facades\JsValidatorFacade {}
  

@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    {!! SEO::generate() !!}
+
     {{-- CSS --}}
     @include('admin.layouts.styles')
     {{-- End - CSS --}}
 
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
 </head>
 
 <body>

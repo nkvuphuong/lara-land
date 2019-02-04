@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (auth('admin')->attempt($validData)) {
             return redirect()->route('admin.dashboard');
         } else {
-            return back()->withErrors('Username or password is invalid');
+            return back()->withErrors(__('global.user_or_pw_invalid'));
         }
     }
 

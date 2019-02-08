@@ -2,6 +2,7 @@
 
 namespace App\Admin;
 
+use App\Helpers\Formatter\Admin\StatusFormatter;
 use App\Helpers\Formatter\Admin\UrlFormatter;
 use App\Helpers\Formatter\DateTimeFormatter;
 use App\ModelWithSoftDeletes;
@@ -9,7 +10,7 @@ use Dimsav\Translatable\Translatable;
 
 class PostCategory extends ModelWithSoftDeletes
 {
-    use UrlFormatter, DateTimeFormatter, Translatable;
+    use UrlFormatter, DateTimeFormatter, StatusFormatter, Translatable;
 
     public $translatedAttributes = ['name', 'slug'];
 

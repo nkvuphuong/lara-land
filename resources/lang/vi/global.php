@@ -10,4 +10,7 @@ return [
     'user_or_pw_invalid' => 'Tên đăng nhập hoặc mật khẩu không hợp lệ',
     'create' => 'Tạo mới',
     'edit' => 'Cập nhật',
+
+    'lang_vi' => 'Tiếng Việt',
+    'lang_en' => 'Tiếng Anh',
 ];

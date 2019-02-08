@@ -22,7 +22,7 @@ trait UrlFormatter
      */
     public static function routeUrl($act = null, $params = null, $additionals = [])
     {
-        $url = route(self::$prefix . self::$route . ($act ? '.' . $act : ''), $params);
+        $url = route(self::$prefixUrl . self::$routeUrl . ($act ? '.' . $act : ''), $params);
 
         if ($additionals && is_array($additionals)) {
             $additionalUrl = [];
@@ -103,7 +103,7 @@ trait UrlFormatter
 
     public static function rootUrl()
     {
-        return self::$prefix . static::$route . '/';
+        return self::$prefixUrl . static::$route . '/';
     }
 
     public static function showUrlWithSlug($slug, $id)

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Admin\PostCategory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /**
+         * ADMIN
+         */
+
+        //Post category parent options
+        view()->composer('admin.post-categories.parent-options', function ($view) {
+
+            $exceptId = request()->route()->parameter('post_category') !== null ? request()->route()->parameter('post_category')->id : 0;
+
+            $parents = PostCategory::rootParent($exceptId);
+            $view->with(compact('parents'));
+        });
     }
 
     /**

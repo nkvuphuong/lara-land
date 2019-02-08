@@ -1,0 +1,1 @@
+<input type="hidden" name="is_continue" value="0" id="is_continue">

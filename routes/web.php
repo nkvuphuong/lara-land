@@ -22,6 +22,15 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
 Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', 'middleware' => ['auth:admin']], function() {
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::get('/logout', 'AuthController@logout')->name('logout');
+
+    //Post categories
+    Route::get('/post-categories/{id}/delete-file', 'PostCategoryController@deleteFile')->name('post-categories.delete-file');
+    Route::get('/post-categories/{postCategory}/delete', 'PostCategoryController@destroy')->name('post-categories.delete');
+    Route::post('/post-categories/delete', 'PostCategoryController@bulkDestroy')->name('post-categories.set-delete');
+    Route::post('/post-categories/set-show', 'PostCategoryController@bulkShow')->name('post-categories.set-show');
+    Route::post('/post-categories/set-hide', 'PostCategoryController@bulkHide')->name('post-categories.set-hide');
+    Route::resource('/post-categories', 'PostCategoryController');
+
 });
 
 

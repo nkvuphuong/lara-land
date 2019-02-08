@@ -15,7 +15,7 @@
                     <!-- /.box-header -->
                     <!-- form start -->
                     <form id="form-post-categories" role="form" method="post" action="{{ \App\Admin\PostCategory::storeUrl() }}" enctype="multipart/form-data">
-                        @include('admin.post-category.form')
+                        @include('admin.post-categories.form')
                         <!-- /.box-body -->
 
                         <div class="box-footer">

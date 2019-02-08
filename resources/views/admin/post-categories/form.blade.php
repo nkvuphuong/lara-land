@@ -8,7 +8,7 @@
         <label for="parentInput">{{__('admin/post-category.parent')}}</label>
         <select name="parent_id" id="parentInput" class="form-control">
             <option value="0"></option>
-            @include('admin.post-category.parent-options')
+            @include('admin.post-categories.parent-options')
         </select>
     </div>
     <div class="form-group">
@@ -22,7 +22,7 @@
                 <label for="imageInput">{{__('admin/post-category.image')}}</label>
                 <input type="file" id="imageInput" name="image">
             </div>
-            @if(isset($postCategory) && FileHelper::fileExist($postCategory->image))
+            @if(isset($postCategory) && \App\Helpers\FileHelper::fileExist($postCategory->image))
                 <div class="form-group image-upload-wrap">
                     <div class="thumbnail">
                         <i class="fa fa-trash fa-2x pull-right"

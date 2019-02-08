@@ -1,0 +1,1 @@
+<input type="hidden" name="locale" value="{{ request('locale', config('translatable.locale')) }}">

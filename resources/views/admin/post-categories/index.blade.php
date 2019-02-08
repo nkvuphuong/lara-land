@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('admin.body')
+@section('page')
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -21,12 +21,12 @@
                                         </label>
                                     </th>
                                     <th>ID</th>
-                                    <th>{{__('admin/post-category.name')}}</th>
+                                    <th>{{__('admin/post-categories.name')}}</th>
                                     <th>{{__('global.image')}}</th>
-                                    <th>{{__('admin/post-category.parent')}}</th>
+                                    <th>{{__('admin/post-categories.parent')}}</th>
                                     <th>{{__('admin/global.display_status')}}</th>
-                                    <th>{{__('global.created_at')}}</th>
-                                    <th>{{__('global.actions')}}</th>
+                                    <th>{{__('admin/global.created_at')}}</th>
+                                    <th>{{__('admin/global.actions')}}</th>
                                 </tr>
                                 @if(count($data->items()))
                                     @foreach($data->items() as $item)

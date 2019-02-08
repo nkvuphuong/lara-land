@@ -14,6 +14,8 @@ return [
     'payment_status' => 'Trạng thái thanh toán',
     'from' => 'Từ',
     'to' => 'Đến',
+    'created_at' => 'Ngày tạo',
+    'actions' => 'Thao tác',
 
     //Modules
     'dashboard' => 'Dashboard',

@@ -9,6 +9,6 @@
 <!-- main js -->
 <script src="{{ asset('admin/libs/js/main-js.js') }}/"></script>
 
-@yield('admin_scripts');
+@yield('admin_scripts')
 
 <script src="{{ asset('/admin/js/main.js') }}"></script>

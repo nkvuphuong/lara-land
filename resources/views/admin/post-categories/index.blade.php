@@ -13,10 +13,11 @@
                         @include('admin.post-categories.action-controls')
                     </div>
                     <!-- /.box-header -->
-                    {{--<div class="box-body table-responsive no-padding">
+                    <div class="card-body">
                         <form id="bulk-action-frm" action="" method="post">
                             {{ csrf_field() }}
-                            <table class="table table-hover">
+                            <table class="table table-striped">
+                                <thead>
                                 <tr>
                                     <th>
                                         <label for="check-all-id">
@@ -31,6 +32,8 @@
                                     <th>{{__('admin/global.created_at')}}</th>
                                     <th>{{__('admin/global.actions')}}</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @if(count($data->items()))
                                     @foreach($data->items() as $item)
                                         <tr>
@@ -61,16 +64,15 @@
                                     @endforeach
                                 @else
                                     <tr>
-                                        <td colspan="5">{{ __('global.no_data') }}</td>
+                                        <td colspan="8">{{ __('global.no_data') }}</td>
                                     </tr>
                                 @endif
+                                </tbody>
                             </table>
                         </form>
-                    </div>--}}
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        {{  $data->appends( request()->query() )->links() }}
+                        <nav>{{  $data->appends( request()->query() )->links() }}</nav>
                     </div>
+                    <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
             </div>

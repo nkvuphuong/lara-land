@@ -505,3 +505,7 @@
         </div>
     </div>
 @endsection
+
+@section('admin_scripts')
+    @include('admin.layouts.scripts.dashboard')
+@endsection

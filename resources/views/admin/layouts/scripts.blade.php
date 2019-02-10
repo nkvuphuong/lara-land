@@ -8,15 +8,7 @@
 <script src="{{ asset('/admin/vendor/slimscroll/jquery.slimscroll.js') }}"></script>
 <!-- main js -->
 <script src="{{ asset('admin/libs/js/main-js.js') }}/"></script>
-<!-- chart chartist js -->
-<script src="{{ asset('/admin/vendor/charts/chartist-bundle/chartist.min.js') }}"></script>
-<!-- sparkline js -->
-<script src="{{ asset('admin/vendor/charts/sparkline/jquery.sparkline.js') }}/"></script>
-<!-- morris js -->
-<script src="{{ asset('/admin/vendor/charts/morris-bundle/raphael.min.js') }}"></script>
-<script src="{{ asset('/admin/vendor/charts/morris-bundle/morris.js') }}"></script>
-<!-- chart c3 js -->
-<script src="{{ asset('/admin/vendor/charts/c3charts/c3.min.js') }}"></script>
-<script src="{{ asset('/admin/vendor/charts/c3charts/d3-5.4.0.min.js') }}"></script>
-<script src="{{ asset('/admin/vendor/charts/c3charts/C3chartjs.js') }}"></script>
-<script src="{{ asset('/admin/libs/js/dashboard-ecommerce.js') }}"></script>
+
+@yield('admin_scripts');
+
+<script src="{{ asset('/admin/js/main.js') }}"></script>

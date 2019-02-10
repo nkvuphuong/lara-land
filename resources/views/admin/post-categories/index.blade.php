@@ -1,16 +1,19 @@
 @extends('admin.layouts.master')
 
 @section('page')
-    <section class="content">
+    <div class="container-fluid dashboard-content">
+
+        @include('admin.layouts.page-header')
+
         <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
                         @include('admin.layouts.inputs.languages-dropdown')
                         @include('admin.post-categories.action-controls')
                     </div>
                     <!-- /.box-header -->
-                    <div class="box-body table-responsive no-padding">
+                    {{--<div class="box-body table-responsive no-padding">
                         <form id="bulk-action-frm" action="" method="post">
                             {{ csrf_field() }}
                             <table class="table table-hover">
@@ -63,7 +66,7 @@
                                 @endif
                             </table>
                         </form>
-                    </div>
+                    </div>--}}
                     <!-- /.box-body -->
                     <div class="box-footer clearfix">
                         {{  $data->appends( request()->query() )->links() }}
@@ -72,7 +75,7 @@
                 <!-- /.box -->
             </div>
         </div>
-    </section>
+    </div>
 
     @include('admin.post-categories.search-form')
 

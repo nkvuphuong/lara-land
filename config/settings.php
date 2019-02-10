@@ -14,27 +14,27 @@ return [
         //Button CSS, HTML
         'button' => [
             'edit' => [
-                'class' => 'btn btn-flat bg-orange',
+                'class' => 'btn btn-brand btn-sm',
                 'icon' => '<i class="fa fa-edit"></i>'
             ],
             'delete' => [
-                'class' => 'btn btn-flat bg-red',
+                'class' => 'btn btn-danger btn-sm',
                 'icon' => '<i class="fa fa-trash"></i>',
             ],
             'add' => [
-                'class' => 'btn btn-flat bg-primary',
+                'class' => 'btn btn-primary btn-sm',
                 'icon' => '<i class="fa fa-plus"></i>',
             ],
             'search' => [
-                'class' => 'btn btn-flat bg-info',
+                'class' => 'btn btn-info btn-sm',
                 'icon' => '<i class="fa fa-search"></i>',
             ],
             'show' => [
-                'class' => 'btn btn-flat bg-green',
+                'class' => 'btn btn-success btn-sm',
                 'icon' => '<i class="fa fa-eye"></i>',
             ],
             'hide' => [
-                'class' => 'btn btn-flat bg-yellow',
+                'class' => 'btn btn-warning btn-sm',
                 'icon' => '<i class="fa fa-eye-slash"></i>',
             ]
         ],

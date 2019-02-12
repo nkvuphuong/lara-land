@@ -5,21 +5,21 @@
 </div>
 <div class="box-body">
     <div class="form-group">
-        <label for="parentInput">{{__('admin/post-category.parent')}}</label>
+        <label for="parentInput">{{__('admin/post-categories.parent')}}</label>
         <select name="parent_id" id="parentInput" class="form-control">
             <option value="0"></option>
             @include('admin.post-categories.parent-options')
         </select>
     </div>
     <div class="form-group">
-        <label for="nameInput">{{__('admin/post-category.name')}}</label>
+        <label for="nameInput">{{__('admin/post-categories.name')}}</label>
         <input type="text" class="form-control" id="nameInput" name="name" placeholder=""
                value="{{ old('name', isset($postCategory) ? $postCategory->name : '') }}">
     </div>
     <div class="row">
         <div class="col-xs-8">
             <div class="form-group">
-                <label for="imageInput">{{__('admin/post-category.image')}}</label>
+                <label for="imageInput">{{__('admin/post-categories.image')}}</label>
                 <input type="file" id="imageInput" name="image">
             </div>
             @if(isset($postCategory) && \App\Helpers\FileHelper::fileExist($postCategory->image))

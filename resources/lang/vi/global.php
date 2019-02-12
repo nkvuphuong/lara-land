@@ -15,6 +15,7 @@ return [
     'all' => 'Tất cả',
     'search' => 'Tìm kiếm',
     'close' => 'Đóng',
+    'continue' => 'Tiếp tục',
 
     'lang_vi' => 'Tiếng Việt',
     'lang_en' => 'Tiếng Anh',

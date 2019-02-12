@@ -14,27 +14,27 @@ return [
         //Button CSS, HTML
         'button' => [
             'edit' => [
-                'class' => 'btn btn-brand btn-sm',
+                'class' => 'btn btn-sm btn-outline-light',
                 'icon' => '<i class="fa fa-edit"></i>'
             ],
             'delete' => [
-                'class' => 'btn btn-danger btn-sm',
-                'icon' => '<i class="fa fa-trash"></i>',
+                'class' => 'btn btn-sm btn-outline-light',
+                'icon' => '<i class="far fa-trash-alt"></i>',
             ],
             'add' => [
-                'class' => 'btn btn-primary btn-sm',
+                'class' => 'btn btn-sm btn-outline-light',
                 'icon' => '<i class="fa fa-plus"></i>',
             ],
             'search' => [
-                'class' => 'btn btn-info btn-sm',
+                'class' => 'btn btn-sm btn-outline-light',
                 'icon' => '<i class="fa fa-search"></i>',
             ],
             'show' => [
-                'class' => 'btn btn-success btn-sm',
+                'class' => 'btn btn-sm btn-outline-light',
                 'icon' => '<i class="fa fa-eye"></i>',
             ],
             'hide' => [
-                'class' => 'btn btn-warning btn-sm',
+                'class' => 'btn btn-sm btn-outline-light',
                 'icon' => '<i class="fa fa-eye-slash"></i>',
             ]
         ],

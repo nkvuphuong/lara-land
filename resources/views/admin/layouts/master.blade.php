@@ -20,15 +20,18 @@
 <!-- main wrapper -->
 <!-- ============================================================== -->
 <div class="dashboard-main-wrapper">
-    @include('admin.layouts.navbar')
-    <!-- ============================================================== -->
-    @include('admin.layouts.left-sidebar')
-    <!-- ============================================================== -->
+@include('admin.layouts.navbar')
+<!-- ============================================================== -->
+@include('admin.layouts.left-sidebar')
+<!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- wrapper  -->
     <!-- ============================================================== -->
     <div class="dashboard-wrapper">
-        @yield('page')
+        <div class="container-fluid dashboard-content">
+            @include('admin.layouts.page-header')
+            @yield('admin_page')
+        </div>
         @include('admin.layouts.footer')
     </div>
     <!-- ============================================================== -->

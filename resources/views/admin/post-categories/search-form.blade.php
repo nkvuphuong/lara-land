@@ -10,14 +10,14 @@
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="parentInput">{{ __('admin/post-category.parent') }}</label>
+                            <label for="parentInput">{{ __('admin/post-categories.parent') }}</label>
                             <select class="form-control" name="parent_id" id="parentInput">
                                 <option value="">{{ __('global.all') }}</option>
                                 @include('admin.post-categories.parent-options')
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="nameInput">{{ __('admin/post-category.name') }}</label>
+                            <label for="nameInput">{{ __('admin/post-categories.name') }}</label>
                             <input type="text" class="form-control" id="nameInput" name="name" value="{{ request('name') }}">
                         </div>
                         <div class="form-group">

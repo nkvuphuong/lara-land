@@ -12,6 +12,9 @@ return [
     'edit' => 'Cập nhật',
     'image' => 'Hình ảnh',
     'no_data' => 'Không có dữ liệu',
+    'all' => 'Tất cả',
+    'search' => 'Tìm kiếm',
+    'close' => 'Đóng',
 
     'lang_vi' => 'Tiếng Việt',
     'lang_en' => 'Tiếng Anh',

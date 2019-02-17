@@ -43,7 +43,7 @@
                                             <a href="{{ \App\Admin\PostCategory::editUrl($item->id) }}">{{ $item->name }}</a>
                                         </td>
                                         <td><img style="max-width: 100px; max-height: 100px"
-                                                 src="{{ FileHelper::imageSrc($item->image) }}" alt="">
+                                                 src="{{ \App\Helpers\FileHelper::imageSrc($item->image) }}" alt="">
                                         </td>
                                         @if($parent = $item->parent)
                                             <td><a href="{{ \App\Admin\PostCategory::editUrl($item->parent->id) }}">{{ $item->parent->name }}</a></td>

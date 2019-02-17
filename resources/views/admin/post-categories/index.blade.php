@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('admin_page')
+@section('admin.page')
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="card">
@@ -35,7 +35,7 @@
                                     <tr>
                                         <td>
                                             <label class="custom-control custom-checkbox" for="check-all-{{$item->id}}">
-                                                <input id="check-all-{{$item->id}}" type="checkbox" checked="" class="custom-control-input" name="checked_ids[]" value="{{$item->id}}"><span class="custom-control-label"></span>
+                                                <input id="check-all-{{$item->id}}" type="checkbox" class="custom-control-input" name="checked_ids[]" value="{{$item->id}}"><span class="custom-control-label"></span>
                                             </label>
                                         </td>
                                         <td>{{ $item->id }}</td>

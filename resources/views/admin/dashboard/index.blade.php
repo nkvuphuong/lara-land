@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('admin_page')
+@section('admin.page')
     <div class="ecommerce-widget">
 
         <div class="row">
@@ -564,5 +564,5 @@
 @endsection
 
 @section('admin_scripts')
-    @include('admin.layouts.scripts.dashboard')
+    @include('admin.layouts.footer-scripts.dashboard')
 @endsection

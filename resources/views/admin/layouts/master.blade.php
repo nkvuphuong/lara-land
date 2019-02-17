@@ -13,6 +13,10 @@
     @include('admin.layouts.styles')
     {{-- End - CSS --}}
 
+    {{-- Scripts --}}
+    @include('admin.layouts.header-scripts')
+    {{-- End - Scripts --}}
+
 </head>
 
 <body>
@@ -30,7 +34,7 @@
     <div class="dashboard-wrapper">
         <div class="container-fluid dashboard-content">
             @include('admin.layouts.page-header')
-            @yield('admin_page')
+            @yield('admin.page')
         </div>
         @include('admin.layouts.footer')
     </div>
@@ -42,7 +46,7 @@
 <!-- end main wrapper  -->
 
 {{-- Scripts --}}
-@include('admin.layouts.scripts')
+@include('admin.layouts.footer-scripts')
 {{-- End - Scripts --}}
 
 </body>

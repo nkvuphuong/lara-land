@@ -53,8 +53,8 @@
                                         <td>{!! \App\Admin\PostCategory::displayStatusLabel($item->display_status) !!}</td>
                                         <td>{{ \App\Admin\PostCategory::dateTimeFormat($item->created_at) }}</td>
                                         <td>
-                                            <a class="{{ config('settings_admin.button.edit.class') }}" href="{{ \App\Admin\PostCategory::editUrl($item->id) }}">{!! config('settings_admin.button.edit.icon') !!}</a>
-                                            <a  class="{{ config('settings_admin.button.delete.class') }}" onclick="AdminActions.confirmDelete('{{ \App\Admin\PostCategory::deleteUrl($item->id) }}')">{!! config('settings_admin.button.delete.icon') !!}</a>
+                                            <a class="{{ config('settings.admin.button.edit.class') }}" href="{{ \App\Admin\PostCategory::editUrl($item->id) }}">{!! config('settings.admin.button.edit.icon') !!}</a>
+                                            <a  class="{{ config('settings.admin.button.delete.class') }}" onclick="AdminActions.confirmDelete('{{ \App\Admin\PostCategory::deleteUrl($item->id) }}')">{!! config('settings.admin.button.delete.icon') !!}</a>
                                         </td>
                                     </tr>
                                 @endforeach

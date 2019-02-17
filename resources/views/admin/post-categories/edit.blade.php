@@ -17,7 +17,7 @@
                     <form id="form-post-categories" role="form" method="post" action="{{ \App\Admin\PostCategory::updateUrl($postCategory->id)}}" enctype="multipart/form-data">
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="id" value="{{ $postCategory->id }}">
-                        @include('admin.post-category.form')
+                        @include('admin.post-categories.form')
                         <!-- /.box-body -->
 
                         <div class="box-footer">

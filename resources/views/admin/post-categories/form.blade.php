@@ -1,9 +1,9 @@
 {{ csrf_field() }}
 @include('admin.layouts.locale-input')
-<div class="box-header with-border">
+<div class="card-header">
     @include('admin.layouts.inputs.languages-dropdown')
 </div>
-<div class="box-body">
+<div class="card-body">
     <div class="form-group">
         <label for="parentInput">{{__('admin/post-categories.parent')}}</label>
         <select name="parent_id" id="parentInput" class="form-control">
@@ -17,7 +17,7 @@
                value="{{ old('name', isset($postCategory) ? $postCategory->name : '') }}">
     </div>
     <div class="row">
-        <div class="col-xs-8">
+        <div class="col-8">
             <div class="form-group">
                 <label for="imageInput">{{__('admin/post-categories.image')}}</label>
                 <input type="file" id="imageInput" name="image">
@@ -32,7 +32,7 @@
                 </div>
             @endif
         </div>
-        <div class="col-xs-4">
+        <div class="col-4">
             <div class="form-group">
                 <label for="displayStatusInput">{{__('admin/global.display_status')}}</label>
                 <select class="form-control" name="display_status" id="displayStatusInput">

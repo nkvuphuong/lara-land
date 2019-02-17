@@ -43,7 +43,7 @@ class PostCategoryController extends Controller
      */
     public function create()
     {
-        \SEOMeta::setTitle(__('admin/post-category.create'));
+        \SEOMeta::setTitle(__('admin/post-categories.create'));
 
         $selectedDisplayStatus = old('display_status') !== null ? old('display_status') * 1 : 1;
         return view('admin.post-categories.create', compact('selectedDisplayStatus'));
@@ -64,7 +64,7 @@ class PostCategoryController extends Controller
         $data['image'] = ($path = FileHelper::upload('image', 'post-categories', $request->input('name'))) ? $path : null;
 
         if ($rs = PostCategory::create($data)) {
-            session()->flash('success', __('admin/post-category.added_new_success'));
+            session()->flash('success', __('admin/post-categories.added_new_success'));
 
             if ($data['is_continue']) {
                 return back();
@@ -72,7 +72,7 @@ class PostCategoryController extends Controller
                 return redirect()->route('admin.post-categories.index', ['locale' => $request->input('locale')]);
             }
         } else {
-            session()->flash('error', __('admin/post-category.added_new_fail'));
+            session()->flash('error', __('admin/post-categories.added_new_fail'));
             return back()->withInput();
         }
     }
@@ -96,7 +96,7 @@ class PostCategoryController extends Controller
      */
     public function edit(PostCategory $postCategory)
     {
-        \SEOMeta::setTitle(__('admin/post-category.edit'));
+        \SEOMeta::setTitle(__('admin/post-categories.edit'));
 
         $selectedDisplayStatus = old('display_status') !== null ? old('display_status') * 1 : $postCategory->display_status;
         return view('admin.post-categories.edit', compact('postCategory', 'selectedDisplayStatus'));
@@ -118,14 +118,14 @@ class PostCategoryController extends Controller
         $data['image'] = ($path = FileHelper::upload('image', 'post-categories', $request->input('name'), $postCategory->image)) ? $path : $postCategory->image;
 
         if ($rs = $postCategory->update($data)) {
-            session()->flash('success', __('admin/post-category.updated_success'));
+            session()->flash('success', __('admin/post-categories.updated_success'));
             if ($data['is_continue']) {
                 return back();
             } else {
                 return redirect()->route('admin.post-categories.index', ['locale' => $request->input('locale')]);
             }
         } else {
-            session()->flash('error', __('admin/post-category.updated_fail'));
+            session()->flash('error', __('admin/post-categories.updated_fail'));
             return back()->withInput();
         }
     }

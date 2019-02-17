@@ -564,5 +564,5 @@
 @endsection
 
 @section('admin_scripts')
-    @include('admin.layouts.footer-scripts.dashboard')
+    @include('admin.layouts.scripts.dashboard')
 @endsection

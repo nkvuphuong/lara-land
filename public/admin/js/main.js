@@ -1,7 +1,7 @@
 var AdminMain = {
     deleteFile: function (obj, path) {
         let wrap = obj.parents('.image-upload-wrap:first');
-        let thumbnail = obj.parents('.thumbnail:first');
+        let thumbnail = obj.parents('.img-thumbnail:first');
         let _self = this;
         _self.openLoading(thumbnail);
         $.ajax({

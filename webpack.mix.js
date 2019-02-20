@@ -12,4 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+    .js('resources/assets/js/admin/app.js', 'public/admin/js')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .styles([
+        'node_modules/ladda/dist/ladda.min.css',
+    ], 'public/admin/css/app.css');
+;

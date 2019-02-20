@@ -1,4 +1,5 @@
 <!-- jquery 3.3.1 -->
+<script src="{{mix('/admin/js/app.js')}}"></script>
 <script src="{{ asset('/admin/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 

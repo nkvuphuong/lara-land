@@ -42,11 +42,11 @@ return [
         //Display status CSS
         'display_status' => [
             '0' => [
-                'class' => 'label label-default',
+                'class' => 'badge badge-pill badge-dark',
                 'icon' => '<i class="fa fa-eye-slash"></i>',
             ],
             '1' => [
-                'class' => 'label label-success',
+                'class' => 'badge badge-pill badge-success',
                 'icon' => '<i class="fa fa-eye"></i>',
             ]
         ],

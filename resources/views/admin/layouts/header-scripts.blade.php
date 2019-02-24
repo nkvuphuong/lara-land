@@ -5,3 +5,6 @@
 
 <!-- Laravel Javascript Validation -->
 <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+
+<!-- Laravel messages JS lang -->
+<script type="text/javascript" src="{{ asset('js/messages.js')}}"></script>

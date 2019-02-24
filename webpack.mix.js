@@ -18,3 +18,16 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'node_modules/ladda/dist/ladda.min.css',
     ], 'public/admin/css/app.css');
 ;
+
+const WebpackShellPlugin = require('webpack-shell-plugin');
+
+// Add shell command plugin configured to create JavaScript language file
+mix.webpackConfig({
+    plugins:
+        [
+            new WebpackShellPlugin({
+                onBuildStart: ['php artisan lang:js public/js/messages.js --quiet'],
+                onBuildEnd: []
+            })
+        ]
+});

@@ -18,7 +18,7 @@
     AdminMain.ckEditorInit('{{ csrf_token() }}');
     // AdminMain.select2Init();
     AdminMain.dropdownInit();
-{{--    Lang.setLocale('{{ App::getLocale() }}');--}}
+    Lang.setLocale('{{ App::getLocale() }}');
 //     $('[data-mask]').inputmask();
     {{--$('.datepicker').datepicker({--}}
         {{--format: '{{ config('settings_admin.date_mask') }}',--}}

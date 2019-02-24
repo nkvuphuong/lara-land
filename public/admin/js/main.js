@@ -49,7 +49,7 @@ var AdminMain = {
     },
     bulkAction: function (action, frmId = '#bulk-action-frm') {
         AdminActions.confirm().then((result) => {
-            if (result.value) {
+            if (result) {
                 $(frmId).prop("action", action).submit();
             }
         });
@@ -107,12 +107,8 @@ var AdminActions = {
     confirm: function () {
         return swal({
             title: Lang.get('admin/global.are_you_sure'),
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: Lang.get('admin/global.yes'),
-            cancelButtonText: Lang.get('admin/global.no')
+            buttons: true,
+            icon: "warning",
         });
     },
     confirmDelete: function (url) {

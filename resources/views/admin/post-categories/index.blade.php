@@ -35,7 +35,7 @@
                                     <tr>
                                         <td>
                                             <label class="custom-control custom-checkbox" for="check-all-{{$item->id}}">
-                                                <input id="check-all-{{$item->id}}" type="checkbox" class="custom-control-input" name="checked_ids[]" value="{{$item->id}}"><span class="custom-control-label"></span>
+                                                <input id="check-all-{{$item->id}}" type="checkbox" class="custom-control-input check-all-target" name="checked_ids[]" value="{{$item->id}}"><span class="custom-control-label"></span>
                                             </label>
                                         </td>
                                         <td>{{ $item->id }}</td>

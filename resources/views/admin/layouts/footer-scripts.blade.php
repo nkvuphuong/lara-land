@@ -11,3 +11,19 @@
 @yield('admin_scripts')
 
 <script src="{{ asset('/admin/js/main.js') }}"></script>
+
+{{--Load script--}}
+<script>
+    AdminMain.checkAllToggle();
+    AdminMain.ckEditorInit('{{ csrf_token() }}');
+    // AdminMain.select2Init();
+    AdminMain.dropdownInit();
+{{--    Lang.setLocale('{{ App::getLocale() }}');--}}
+//     $('[data-mask]').inputmask();
+    {{--$('.datepicker').datepicker({--}}
+        {{--format: '{{ config('settings_admin.date_mask') }}',--}}
+    {{--});--}}
+    // $('.gallery-item').matchHeight({
+    //     target: $('.gallery-item .gallery-picture')
+    // });
+</script>

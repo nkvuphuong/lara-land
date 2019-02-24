@@ -44,7 +44,7 @@ var AdminMain = {
     },
     checkAllToggle: function (trigger = ".check-all-trigger", target = ".check-all-target") {
         $(trigger).change((e) => {
-           $(target).attr("checked", $(e.target).is(':checked'));
+           $(target).prop("checked", $(e.target).is(':checked'));
         });
     },
     bulkAction: function (action, frmId = '#bulk-action-frm') {

@@ -1,9 +1,8 @@
 var AdminMain = {
     deleteFile: function (obj, path) {
         let wrap = obj.parents('.image-upload-wrap:first');
-        let thumbnail = obj.parents('.img-thumbnail:first');
-        let _self = this;
-        _self.openLoading(thumbnail);
+        let loading = Ladda.create( obj[0] );
+        loading.start();
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -23,7 +22,7 @@ var AdminMain = {
                 console.log(err);
             },
             complete: function () {
-                _self.closeLoading(thumbnail);
+                loading.stop();
             }
         })
     },
@@ -68,14 +67,7 @@ var AdminMain = {
 
         CKEDITOR.replace('contentInput', options);
     },
-    openLoading: function (ele) {
-        ele.loading({
-            overlay: $("#loading-overlay")
-        });
-    },
-    closeLoading: function (ele) {
-        ele.loading('stop');
-    },
+
     select2Init: function () {
         $('.select2-input').select2();
     },

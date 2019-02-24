@@ -24,7 +24,7 @@
             </div>
             @if(isset($postCategory) && \App\Helpers\FileHelper::fileExist($postCategory->image))
                 <div class="form-group image-upload-wrap">
-                    <button class="btn btn-danger btn-sm float-left position-absolute delete-img-btn" onclick="AdminMain.deleteFile($(this), '{{ \App\Admin\PostCategory::deleteFileUrl($postCategory->id) }}')">
+                    <button type="button" class="btn btn-danger btn-sm float-left position-absolute delete-img-btn" onclick="AdminMain.deleteFile($(this), '{{ \App\Admin\PostCategory::deleteFileUrl($postCategory->id) }}')">
                         <i class="far fa-trash-alt"></i>
                     </button>
                     <img class="img-thumbnail" src="{{ asset($postCategory->image) }}" alt="">

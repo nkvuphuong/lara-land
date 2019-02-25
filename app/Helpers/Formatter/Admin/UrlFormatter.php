@@ -22,7 +22,10 @@ trait UrlFormatter
      */
     public static function routeUrl($act = null, $params = null, $additionals = [])
     {
-        $url = route(self::$prefixUrl . self::$routeUrl . ($act ? '.' . $act : ''), $params);
+        $indexUrl  = self::$prefixUrl . static::$routeUrl . ($act ? '.' . $act : '.index');
+        $nonIndexUrl  = self::$prefixUrl . static::$routeUrl . ($act ? '.' . $act : '');
+
+        $url = \Route::has($indexUrl) ? route($indexUrl, $params) : route($nonIndexUrl, $params);
 
         if ($additionals && is_array($additionals)) {
             $additionalUrl = [];

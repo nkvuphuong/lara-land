@@ -9,14 +9,15 @@ use Dimsav\Translatable\Translatable;
 
 class PostCategory extends ModelWithSoftDeletes
 {
-    use UrlFormatter, DateTimeFormatter, StatusFormatter, Translatable;
+    use UrlFormatter {routeUrl as traitRouteUrl;}
+    use DateTimeFormatter, StatusFormatter, Translatable;
 
     public $translatedAttributes = ['name', 'slug'];
 
-    public function __construct(array $attributes = [])
+    public static function routeUrl($act = null, $params = null, $additionals = [])
     {
         static::$routeUrl = 'post-categories';
-        parent::__construct($attributes);
+        return static::traitRouteUrl($act, $params, $additionals);
     }
 
     /**

@@ -12,7 +12,6 @@ class PostCategoryController extends Controller
 {
     public function __construct()
     {
-        new PostCategory();
         \SEOMeta::setTitle(__('admin/global.post_category'));
     }
 

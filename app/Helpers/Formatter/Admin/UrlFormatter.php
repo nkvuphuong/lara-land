@@ -12,7 +12,7 @@ namespace App\Helpers\Formatter\Admin;
 trait UrlFormatter
 {
     public static $prefixUrl = "admin.";
-    public static $routeUrl = "";
+    public static $routeUrl = "dashboard";
 
     /**
      * @param $act
@@ -103,7 +103,7 @@ trait UrlFormatter
 
     public static function rootUrl()
     {
-        return self::$prefixUrl . static::$route . '/';
+        return self::$prefixUrl . static::$routeUrl . '/';
     }
 
     public static function showUrlWithSlug($slug, $id)

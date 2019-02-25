@@ -119,29 +119,3 @@ var AdminActions = {
         });
     }
 }
-
-var Order = {
-    actions: {
-        changeStatusByDropdown: function() {
-            let frm = $("#changeStatusByDropdownFrm");
-            let statusInput = frm.find("#statusDropdownValue");
-            let paymentStatusInput = frm.find("#paymentStatusDropdownValue");
-            let optionsObj = frm.find(".statusDropdownOption");
-
-            $.each(optionsObj, function (i, obj) {
-                $(obj).click(function () {
-                    let dataType = $(this).attr('data-type');
-                    let dataValue = $(this).attr('data-value');
-
-                    if (dataType == 'order_status') {
-                        statusInput.val(dataValue);
-                    } else if (dataType == 'payment_status') {
-                        paymentStatusInput.val(dataValue);
-                    }
-
-                    frm.submit();
-                })
-            })
-        }
-    }
-};

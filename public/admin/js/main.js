@@ -113,7 +113,7 @@ var AdminActions = {
     },
     confirmDelete: function (url) {
         this.confirm().then((result) => {
-            if (result.value) {
+            if (result) {
                 window.location = url;
             }
         });

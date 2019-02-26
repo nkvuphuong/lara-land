@@ -16,6 +16,8 @@ return [
     'search' => 'Tìm kiếm',
     'close' => 'Đóng',
     'continue' => 'Tiếp tục',
+    'list' => 'Danh sách',
+    'categories' => 'Danh mục',
 
     'lang_vi' => 'Tiếng Việt',
     'lang_en' => 'Tiếng Anh',

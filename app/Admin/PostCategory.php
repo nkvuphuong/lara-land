@@ -3,7 +3,6 @@
 namespace App\Admin;
 
 use App\Helpers\Formatter\Admin\StatusFormatter;
-use App\Helpers\Formatter\Admin\UrlFormatter;
 use App\Helpers\Formatter\DateTimeFormatter;
 use Dimsav\Translatable\Translatable;
 

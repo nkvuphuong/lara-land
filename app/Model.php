@@ -73,44 +73,4 @@ class Model extends \Illuminate\Database\Eloquent\Model
             }
         }
     }
-
-    /**
-     * @param array $ids
-     * @param $field
-     * @param $value
-     * @return bool
-     */
-    public static function bulkChangeStatus($ids = [], $field, $value)
-    {
-        return static::whereIn('id', $ids)
-            ->update([$field => $value]);
-    }
-
-    /**
-     * @param array $ids
-     * @param $value
-     * @return bool
-     */
-    public static function bulkChangeDisplayStatus($ids = [], $value)
-    {
-        return static::bulkChangeStatus($ids, 'display_status', $value);
-    }
-
-    /**
-     * @param array $ids
-     * @return bool
-     */
-    public static function bulkShowDisplayStatus($ids = [])
-    {
-        return static::bulkChangeDisplayStatus($ids, 1);
-    }
-
-    /**
-     * @param array $ids
-     * @return bool
-     */
-    public static function bulkHideDisplayStatus($ids = [])
-    {
-        return static::bulkChangeDisplayStatus($ids, 0);
-    }
 }

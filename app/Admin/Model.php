@@ -8,9 +8,20 @@
 
 namespace App\Admin;
 
+use App\Helpers\Formatter\Admin\UrlFormatter;
 
 class Model extends \App\Model
 {
+    use UrlFormatter {routeUrl as traitRouteUrl;}
+
+    public static $newRouteUrl;
+
+    public static function routeUrl($act = null, $params = null, $additionals = [])
+    {
+        static::$routeUrl = static::$newRouteUrl;
+        return static::traitRouteUrl($act, $params, $additionals);
+    }
+
     /**
      * @param array $ids
      * @param $field

@@ -5,7 +5,7 @@
 </div>
 <div class="box-body">
     <div class="form-group">
-        <label for="nameInput">{{__('admin/post.name')}}</label>
+        <label for="nameInput">{{__('admin/posts.name')}}</label>
         <input type="text" class="form-control" id="nameInput" name="name" placeholder=""
                value="{{ old('name', isset($post) ? $post->name : '') }}">
     </div>
@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="imageInput">{{__('admin/post.image')}}</label>
+                <label for="imageInput">{{__('admin/posts.image')}}</label>
                 <input type="file" id="imageInput" name="image">
             </div>
             @if(isset($post) && FileHelper::fileExist($post->image))
@@ -41,11 +41,11 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="descriptionInput">{{__('admin/post.description')}}</label>
+        <label for="descriptionInput">{{__('admin/posts.description')}}</label>
         <textarea name="description" id="descriptionInput" rows="10" class="form-control">{{ old('description', isset($post) ? $post->description : '') }}</textarea>
     </div>
     <div class="form-group">
-        <label for="contentInput">{{__('admin/post.content')}}</label>
+        <label for="contentInput">{{__('admin/posts.content')}}</label>
         <textarea name="content" id="contentInput" class="form-control">{{ old('content', isset($post) ? $post->content : '') }}</textarea>
     </div>
 </div>

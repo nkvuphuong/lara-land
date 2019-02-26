@@ -21,7 +21,7 @@
                                         </label>
                                     </th>
                                     <th>ID</th>
-                                    <th>{{__('admin/post.name')}}</th>
+                                    <th>{{__('admin/posts.name')}}</th>
                                     <th>{{__('global.image')}}</th>
                                     <th>{{__('admin/global.display_status')}}</th>
                                     <th>{{__('global.created_at')}}</th>

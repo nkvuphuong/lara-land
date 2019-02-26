@@ -38,7 +38,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        \SEOMeta::setTitle(__('admin/post.create'));
+        \SEOMeta::setTitle(__('admin/posts.create'));
 
         $selectedCates = old('cate_id');
         $selectedDisplayStatus = old('display_status') !== null ? old('display_status') * 1 : 1;
@@ -67,14 +67,14 @@ class PostController extends Controller
                 $rs->categories()->sync($cateIds);
             }
 
-            session()->flash('success', __('admin/post.added_new_success'));
+            session()->flash('success', __('admin/posts.added_new_success'));
             if ($data['is_continue']) {
                 return back();
             } else {
                 return redirect()->route('admin.posts.index', ['locale' => $request->input('locale')]);
             }
         } else {
-            session()->flash('error', __('admin/post.added_new_fail'));
+            session()->flash('error', __('admin/posts.added_new_fail'));
             return back()->withInput();
         }
     }
@@ -93,7 +93,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        \SEOMeta::setTitle(__('admin/post.edit'));
+        \SEOMeta::setTitle(__('admin/posts.edit'));
 
         $selectedCates = old('cate_id', $post->getCateIds()->all());
         $selectedDisplayStatus = old('display_status') !== null ? old('display_status') * 1 : $post->display_status;
@@ -118,14 +118,14 @@ class PostController extends Controller
             //Update pivot
             $post->categories()->sync($request->input('cate_id', []));
 
-            session()->flash('success', __('admin/post.updated_success'));
+            session()->flash('success', __('admin/posts.updated_success'));
             if ($data['is_continue']) {
                 return back();
             } else {
                 return redirect()->route('admin.posts.index', ['locale' => $request->input('locale')]);
             }
         } else {
-            session()->flash('error', __('admin/post.updated_fail'));
+            session()->flash('error', __('admin/posts.updated_fail'));
             return back()->withInput();
         }
     }

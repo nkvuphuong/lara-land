@@ -10,7 +10,7 @@
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="nameInput">{{ __('admin/post.name') }}</label>
+                            <label for="nameInput">{{ __('admin/posts.name') }}</label>
                             <input type="text" class="form-control" id="nameInput" name="name" value="{{ request('name') }}">
                         </div>
                         <div class="form-group">

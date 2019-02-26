@@ -24,7 +24,7 @@ class PostController extends Controller
         $data = Post::with('translations')
             ->filter(request()->all())
             ->latest()
-            ->paginate(\Config::get('settings_admin.per_page'));;
+            ->paginate(config('settings.admin.per_page'));;
 
         $selectedDisplayStatus = request('display_status') === '0' || !empty(request('display_status'))  ? request()->get('display_status') * 1 : '';
 

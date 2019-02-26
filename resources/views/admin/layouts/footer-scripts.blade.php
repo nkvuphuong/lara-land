@@ -21,7 +21,7 @@
     Lang.setLocale('{{ App::getLocale() }}');
 //     $('[data-mask]').inputmask();
     {{--$('.datepicker').datepicker({--}}
-        {{--format: '{{ config('settings_admin.date_mask') }}',--}}
+        {{--format: '{{ config('settings.admin.date_mask') }}',--}}
     {{--});--}}
     // $('.gallery-item').matchHeight({
     //     target: $('.gallery-item .gallery-picture')

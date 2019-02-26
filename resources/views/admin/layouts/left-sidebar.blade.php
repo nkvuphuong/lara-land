@@ -18,12 +18,12 @@
                         <a class="nav-link active" href="{{ \App\Helpers\Formatter\Admin\UrlFormatter::routeUrl() }}"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ \App\Admin\PostCategory::indexUrl() }}" data-toggle="collapse" aria-expanded="false"
+                        <a class="nav-link" href="{{ \App\Admin\Post::indexUrl() }}" data-toggle="collapse" aria-expanded="false"
                            data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-newspaper"></i>{{ __('admin/global.post') }}</a>
                         <div id="submenu-2" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">{{ __('global.list') }}</a>
+                                    <a class="nav-link" href="{{ \App\Admin\Post::indexUrl() }}">{{ __('global.list') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ \App\Admin\PostCategory::indexUrl() }}">{{ __('global.categories') }}</a>

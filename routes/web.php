@@ -31,6 +31,14 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
     Route::post('/post-categories/set-hide', 'PostCategoryController@bulkHide')->name('post-categories.set-hide');
     Route::resource('/post-categories', 'PostCategoryController');
 
+    //Posts
+    Route::get('/posts/{id}/delete-file', 'PostController@deleteFile')->name('posts.delete-file');
+    Route::get('/posts/{id}/delete', 'PostController@delete')->name('posts.delete');
+    Route::post('/posts/delete', 'PostController@bulkDestroy')->name('posts.set-delete');
+    Route::post('/posts/set-show', 'PostController@bulkShow')->name('posts.set-show');
+    Route::post('/posts/set-hide', 'PostController@bulkHide')->name('posts.set-hide');
+    Route::resource('/posts', 'PostController');
+
 });
 
 

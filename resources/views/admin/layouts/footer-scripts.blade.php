@@ -15,8 +15,8 @@
 {{--Load script--}}
 <script>
     AdminMain.checkAllToggle();
-    AdminMain.ckEditorInit('{{ csrf_token() }}');
-    // AdminMain.select2Init();
+    {{--AdminMain.ckEditorInit('{{ csrf_token() }}');--}}
+    AdminMain.select2Init();
     AdminMain.dropdownInit();
     Lang.setLocale('{{ App::getLocale() }}');
 //     $('[data-mask]').inputmask();

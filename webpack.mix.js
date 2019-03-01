@@ -11,12 +11,19 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix
     .js('resources/assets/js/admin/app.js', 'public/admin/js')
-    .sass('resources/assets/sass/app.scss', 'public/css')
+    .combine(['public/admin/js/app.js', 'bower_components/select2/dist/js/select2.full.min.js'], 'public/admin/js/all.js')
     .styles([
         'node_modules/ladda/dist/ladda.min.css',
-    ], 'public/admin/css/app.css');
+        'bower_components/select2/dist/css/select2.css'
+    ], 'public/admin/css/app.css')
+// .js('resources/assets/js/app.js', 'public/js')
+// .sass('resources/assets/sass/app.scss', 'public/css')
+// scripts([
+//     'node_modules/ladda/js/ladda.d.ts',
+//     'node_modules/sweetalert/dist/sweetalert.min.js',
+// ], 'public/admin/js/app.js')
 ;
 
 const WebpackShellPlugin = require('webpack-shell-plugin');

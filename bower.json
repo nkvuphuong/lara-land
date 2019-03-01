@@ -1,0 +1,21 @@
+{
+  "name": "lara-land",
+  "description": "",
+  "main": "",
+  "authors": [
+    "PhuongNKV <nkvuphuong@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nkvuphuong/lara-land",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "select2": "^4.0.5"
+  }
+}

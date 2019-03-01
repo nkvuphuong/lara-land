@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('admin.body')
+@section('admin.page')
     <!-- Main content -->
     <section class="content">
         <div class="row">

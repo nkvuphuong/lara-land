@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('admin.body')
+@section('admin.page')
     <section class="content">
         <div class="row">
             <div class="col-xs-12">

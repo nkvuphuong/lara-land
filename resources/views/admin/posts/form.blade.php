@@ -1,37 +1,36 @@
 {{ csrf_field() }}
 @include('admin.layouts.locale-input')
-<div class="box-header with-border">
+<div class="card-header">
     @include('admin.layouts.inputs.languages-dropdown')
 </div>
-<div class="box-body">
+<div class="card-body">
     <div class="form-group">
         <label for="nameInput">{{__('admin/posts.name')}}</label>
         <input type="text" class="form-control" id="nameInput" name="name" placeholder=""
                value="{{ old('name', isset($post) ? $post->name : '') }}">
     </div>
     <div class="form-group">
-        <label for="cateIdsInput">{{__('global.category')}}</label>
+        <label for="cateIdsInput">{{__('global.categories')}}</label>
         <select name="cate_id[]" id="cateIdsInput" class="select2-input form-control" multiple="multiple" style="width: 100%;">
             @include('admin.posts.category-options')
         </select>
     </div>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-8">
             <div class="form-group">
-                <label for="imageInput">{{__('admin/posts.image')}}</label>
+                <label for="imageInput">{{__('admin/post-categories.image')}}</label>
                 <input type="file" id="imageInput" name="image">
             </div>
-            @if(isset($post) && FileHelper::fileExist($post->image))
+            @if(isset($post) && \App\Helpers\FileHelper::fileExist($post->image))
                 <div class="form-group image-upload-wrap">
-                    <div class="thumbnail">
-                        <i class="fa fa-trash fa-2x pull-right"
-                           onclick="AdminMain.deleteFile($(this), '{{ \App\Admin\Post::deleteFileUrl($post->id) }}')"></i>
-                        <img src="{{ asset($post->image) }}" alt="">
-                    </div>
+                    <button type="button" class="btn btn-danger btn-sm float-left position-absolute delete-img-btn" onclick="AdminMain.deleteFile($(this), '{{ \App\Admin\PostCategory::deleteFileUrl($post->id) }}')">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                    <img class="img-thumbnail" src="{{ asset($post->image) }}" alt="">
                 </div>
             @endif
         </div>
-        <div class="col-xs-3">
+        <div class="col-4">
             <div class="form-group">
                 <label for="displayStatusInput">{{__('admin/global.display_status')}}</label>
                 <select class="form-control" name="display_status" id="displayStatusInput">

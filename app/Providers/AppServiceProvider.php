@@ -26,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
             $parents = PostCategory::rootParent($exceptId);
             $view->with(compact('parents'));
         });
+
+        // Post category options
+        view()->composer('admin.posts.category-options', function ($view) {
+            $categories = PostCategory::getAll();
+            $view->with(compact('categories'));
+        });
     }
 
     /**

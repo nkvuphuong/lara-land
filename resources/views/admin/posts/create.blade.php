@@ -1,33 +1,16 @@
 @extends('admin.layouts.master')
 
-@section('admin.body')
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <!-- left column -->
-            <div class="col-md-9">
-                @include('admin.layouts.errors')
-                <!-- general form elements -->
-                <div class="box box-primary">
-                    {{--<div class="box-header with-border">
-                        <h3 class="box-title"></h3>
-                    </div>--}}
-                    <!-- /.box-header -->
-                    <!-- form start -->
-                    <form id="form-posts" role="form" method="post" action="{{ \App\Admin\Post::storeUrl() }}" enctype="multipart/form-data">
-                        @include('admin.posts.form')
-                        <!-- /.box-body -->
-
-                        <div class="box-footer">
-                            @include('admin.layouts.inputs.create-form-actions')
-                        </div>
-                    </form>
-                </div>
-                <!-- /.box -->
+@section('admin.page')
+    <div class="row">
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+            @include('admin.layouts.errors')
+            <div class="card">
+                <form id="form-posts" role="form" method="post" action="{{ \App\Admin\Post::storeUrl() }}"
+                      enctype="multipart/form-data">
+                    @include('admin.posts.form')
+                    @include('admin.layouts.inputs.create-form-actions')
+                </form>
             </div>
-            <!--/.col (left) -->
         </div>
-        <!-- /.row -->
-    </section>
-    <!-- /.content -->
+    </div>
 @endsection

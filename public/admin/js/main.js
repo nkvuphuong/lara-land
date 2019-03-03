@@ -61,10 +61,10 @@ var AdminMain = {
         if (!$(editorId).length) return false;
 
         var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
-            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&responseType=json&_token=' + token
+            filebrowserImageBrowseUrl: '/admincp/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/admincp/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
+            filebrowserBrowseUrl: '/admincp/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/admincp/laravel-filemanager/upload?type=Files&responseType=json&_token=' + token
         };
 
         CKEDITOR.replace('contentInput', options);

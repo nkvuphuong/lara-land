@@ -1,3 +1,9 @@
+<script>
+    let GlobalOptions = {
+        'lfmUrlPrefix': '{{ config('lfm.url_prefix') }}'
+    };
+</script>
+
 <!-- jquery 3.3.1 -->
 <script src="{{ asset('/admin/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ mix('/admin/js/all.js') }}"></script>

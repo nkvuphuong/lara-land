@@ -1,7 +1,7 @@
 var AdminMain = {
     deleteFile: function (obj, path) {
         let wrap = obj.parents('.image-upload-wrap:first');
-        let loading = Ladda.create( obj[0] );
+        let loading = Ladda.create(obj[0]);
         loading.start();
         $.ajax({
             headers: {
@@ -44,7 +44,7 @@ var AdminMain = {
     },
     checkAllToggle: function (trigger = ".check-all-trigger", target = ".check-all-target") {
         $(trigger).change((e) => {
-           $(target).prop("checked", $(e.target).is(':checked'));
+            $(target).prop("checked", $(e.target).is(':checked'));
         });
     },
     bulkAction: function (action, frmId = '#bulk-action-frm') {
@@ -61,10 +61,10 @@ var AdminMain = {
         if (!$(editorId).length) return false;
 
         var options = {
-            filebrowserImageBrowseUrl: '/admincp/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/admincp/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
-            filebrowserBrowseUrl: '/admincp/laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '/admincp/laravel-filemanager/upload?type=Files&responseType=json&_token=' + token
+            filebrowserImageBrowseUrl: '/' + GlobalOptions.lfmUrlPrefix + '/?type=Images',
+            filebrowserImageUploadUrl: '/' + GlobalOptions.lfmUrlPrefix + '/upload?type=Images&responseType=json&_token=' + token,
+            filebrowserBrowseUrl: '/' + GlobalOptions.lfmUrlPrefix + '/?type=Files',
+            filebrowserUploadUrl: '/' + GlobalOptions.lfmUrlPrefix + '/upload?type=Files&responseType=json&_token=' + token
         };
 
         CKEDITOR.replace('contentInput', options);
@@ -91,12 +91,12 @@ var AdminMain = {
             option.trigger("click");
         })
     },
-    dropdownInit: function() {
+    dropdownInit: function () {
         let _self = this;
         let options = $(".form-dropdown ul.dropdown-menu li");
 
         $.each(options, function (index, option) {
-            $(option).click(function() {
+            $(option).click(function () {
                 _self.dropdownInput($(this));
             });
         });

@@ -13,7 +13,11 @@ let mix = require('laravel-mix');
 
 mix
     .js('resources/assets/js/admin/app.js', 'public/admin/js')
-    .combine(['public/admin/js/app.js', 'bower_components/select2/dist/js/select2.full.min.js'], 'public/admin/js/all.js')
+    .combine([
+            'public/admin/js/app.js',
+            'bower_components/select2/dist/js/select2.full.min.js'
+        ],
+        'public/admin/js/all.js')
     .styles([
         'node_modules/ladda/dist/ladda.min.css',
         'bower_components/select2/dist/css/select2.css'

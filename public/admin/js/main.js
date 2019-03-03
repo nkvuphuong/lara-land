@@ -56,7 +56,9 @@ var AdminMain = {
     },
     ckEditorInit: function (token) {
 
-        if (!$('#contentInput').length) return false;
+        let editorId = '#contentInput';
+
+        if (!$(editorId).length) return false;
 
         var options = {
             filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',

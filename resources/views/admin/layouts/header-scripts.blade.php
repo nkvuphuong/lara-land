@@ -1,5 +1,5 @@
 <script>
-    let GlobalOptions = {
+    var GlobalOptions = {
         'lfmUrlPrefix': '{{ config('lfm.url_prefix') }}'
     };
 </script>

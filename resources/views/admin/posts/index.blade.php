@@ -24,8 +24,8 @@
                                     <th>{{__('admin/posts.name')}}</th>
                                     <th>{{__('global.image')}}</th>
                                     <th>{{__('admin/global.display_status')}}</th>
-                                    <th>{{__('global.created_at')}}</th>
-                                    <th>{{__('global.actions')}}</th>
+                                    <th>{{__('admin/global.created_at')}}</th>
+                                    <th>{{__('admin/global.actions')}}</th>
                                 </tr>
                                 @if(count($data->items()))
                                     @foreach($data->items() as $item)
@@ -40,7 +40,7 @@
                                                 <a href="{{ \App\Admin\Post::editUrl($item->id) }}">{{ $item->name }}</a>
                                             </td>
                                             <td><img style="max-width: 100px; max-height: 100px"
-                                                     src="{{ FileHelper::imageSrc($item->image) }}" alt="">
+                                                     src="{{ \App\Helpers\FileHelper::imageSrc($item->image) }}" alt="">
                                             </td>
                                             <td>{!! \App\Admin\Post::displayStatusLabel($item->display_status) !!}</td>
                                             <td>{{ \App\Admin\Post::dateTimeFormat($item->created_at) }}</td>

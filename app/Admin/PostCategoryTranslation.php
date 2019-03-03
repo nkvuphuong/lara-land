@@ -8,7 +8,6 @@
 
 namespace App\Admin;
 
-
 class PostCategoryTranslation extends ModelTranslation
 {
 

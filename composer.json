@@ -19,7 +19,7 @@
         "proengsoft/laravel-jsvalidation": "^2.3",
         "spatie/laravel-permission": "^2.28",
         "tightenco/ziggy": "^0.6.9",
-        "unisharp/laravel-filemanager": "dev-master"
+        "unisharp/laravel-filemanager": "^1.9"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

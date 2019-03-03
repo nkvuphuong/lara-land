@@ -17,8 +17,19 @@ return [
 
     'use_package_routes'       => true,
 
-    // // Use relative paths (without domain)
-    // 'relative_paths'           => false,
+    'middlewares'              => ['web', 'auth:admin'],
+
+    // The url to this package. Change it if necessary.
+    'url_prefix'               => 'admincp/laravel-filemanager',
+
+    // Use relative paths (without domain)
+    'relative_paths'           => false,
+
+    // behavior on files with identical name
+    // setting it to true cause old file replace with new one
+    // setting it to false show `error-file-exist` error and stop upload
+    'over_write_on_duplicate'  => false,
+
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +62,7 @@ return [
         'file'  => [
             'folder_name'  => 'files',
             'startup_view' => 'grid',
-            'max_size'     => 50000, // size in KB
+            'max_size'     => 50000,
             'valid_mime'   => [
                 'image/jpeg',
                 'image/pjpeg',
@@ -63,7 +74,7 @@ return [
         'image' => [
             'folder_name'  => 'photos',
             'startup_view' => 'list',
-            'max_size'     => 50000, // size in KB
+            'max_size'     => 50000,
             'valid_mime'   => [
                 'image/jpeg',
                 'image/pjpeg',
@@ -103,11 +114,6 @@ return [
     // If true, it will attempt to chmod the file after upload
     'should_change_file_mode'  => true,
 
-    // behavior on files with identical name
-    // setting it to true cause old file replace with new one
-    // setting it to false show `error-file-exist` error and stop upload
-    'over_write_on_duplicate'  => false,
-
     /*
     |--------------------------------------------------------------------------
     | Thumbnail
@@ -123,20 +129,17 @@ return [
         'image/pjpeg',
         'image/png',
     ],
-
-    'thumb_img_width'          => 200,
-
-    'thumb_img_height'         => 200,
-
     /*
     |--------------------------------------------------------------------------
     | jQuery UI options
     |--------------------------------------------------------------------------
      */
-
     'resize_aspectRatio'       => false,
-
     'resize_containment'       => true,
+
+    'thumb_img_width'          => 200,
+
+    'thumb_img_height'         => 200,
 
     /*
     |--------------------------------------------------------------------------
@@ -188,4 +191,28 @@ return [
     'php_ini_overrides'        => [
         'memory_limit' => '256M',
     ],
+
+    'valid_image_mimetypes' => [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+        'image/gif',
+        'image/svg+xml'
+    ],
+
+    'valid_file_mimetypes' => [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+        'image/gif',
+        'application/pdf',
+        'text/plain'
+    ],
+
+    'max_file_size' => '20480',
+    'max_image_size' => '10240',
+
+    'base_directory' => 'public',
+    'images_folder_name' => 'uploads/photos',
+    'files_folder_name' => 'uploads/files',
 ];

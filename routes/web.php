@@ -23,9 +23,6 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::get('/logout', 'AuthController@logout')->name('logout');
 
-    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
-    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
-
     //Post categories
     Route::get('/post-categories/{id}/delete-file', 'PostCategoryController@deleteFile')->name('post-categories.delete-file');
     Route::get('/post-categories/{postCategory}/delete', 'PostCategoryController@destroy')->name('post-categories.delete');
@@ -41,7 +38,6 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'prefix' => 'admincp', '
     Route::post('/posts/set-show', 'PostController@bulkShow')->name('posts.set-show');
     Route::post('/posts/set-hide', 'PostController@bulkHide')->name('posts.set-hide');
     Route::resource('/posts', 'PostController');
-
 });
 
 

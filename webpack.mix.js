@@ -14,8 +14,11 @@ let mix = require('laravel-mix');
 mix
     .js('resources/assets/js/admin/app.js', 'public/admin/js')
     .combine([
+            'node_modules/jquery/dist/jquery.min.js',
             'public/admin/js/app.js',
-            'bower_components/select2/dist/js/select2.full.min.js'
+            'bower_components/select2/dist/js/select2.full.min.js',
+            'public/vendor/jsvalidation/js/jsvalidation.min.js',
+            'public/js/messages.js',
         ],
         'public/admin/js/all.js')
     .styles([

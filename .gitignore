@@ -11,3 +11,4 @@ npm-debug.log
 yarn-error.log
 .env
 /bower_components/
+/public/uploads

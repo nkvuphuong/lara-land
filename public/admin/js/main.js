@@ -17,7 +17,7 @@ var AdminMain = {
                 if (res.status == 'success') {
                     wrap.hide();
                 } else {
-                    alert(res.msg);
+                    toastr.error(res.msg)
                 }
             },
             error: function (err) {

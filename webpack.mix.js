@@ -18,12 +18,14 @@ mix
             'public/admin/js/app.js',
             'bower_components/select2/dist/js/select2.full.min.js',
             'public/vendor/jsvalidation/js/jsvalidation.min.js',
+            'node_modules/toastr/build/toastr.min.js',
             'public/js/messages.js',
         ],
         'public/admin/js/all.js')
     .styles([
         'node_modules/ladda/dist/ladda.min.css',
-        'bower_components/select2/dist/css/select2.css'
+        'bower_components/select2/dist/css/select2.css',
+        'node_modules/toastr/build/toastr.min.css'
     ], 'public/admin/css/app.css')
 // .js('resources/assets/js/app.js', 'public/js')
 // .sass('resources/assets/sass/app.scss', 'public/css')

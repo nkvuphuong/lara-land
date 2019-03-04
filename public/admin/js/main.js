@@ -16,6 +16,8 @@ var AdminMain = {
             success: function (res) {
                 if (res.status == 'success') {
                     wrap.hide();
+                } else {
+                    alert(res.msg);
                 }
             },
             error: function (err) {

@@ -23,7 +23,6 @@
                                 <th>ID</th>
                                 <th>{{__('admin/posts.name')}}</th>
                                 <th>{{__('global.image')}}</th>
-                                <th>{{__('admin/posts.parent')}}</th>
                                 <th>{{__('admin/global.display_status')}}</th>
                                 <th>{{__('admin/global.created_at')}}</th>
                                 <th>{{__('admin/global.actions')}}</th>
@@ -40,21 +39,16 @@
                                         </td>
                                         <td>{{ $item->id }}</td>
                                         <td>
-                                            <a href="{{ \App\Admin\PostCategory::editUrl($item->id) }}">{{ $item->name }}</a>
+                                            <a href="{{ \App\Admin\Post::editUrl($item->id) }}">{{ $item->name }}</a>
                                         </td>
                                         <td><img style="max-width: 100px; max-height: 100px"
                                                  src="{{ \App\Helpers\FileHelper::imageSrc($item->image) }}" alt="">
                                         </td>
-                                        @if($parent = $item->parent)
-                                            <td><a href="{{ \App\Admin\PostCategory::editUrl($item->parent->id) }}">{{ $item->parent->name }}</a></td>
-                                        @else
-                                            <td></td>
-                                        @endif
-                                        <td>{!! \App\Admin\PostCategory::displayStatusLabel($item->display_status) !!}</td>
-                                        <td>{{ \App\Admin\PostCategory::dateTimeFormat($item->created_at) }}</td>
+                                        <td>{!! \App\Admin\Post::displayStatusLabel($item->display_status) !!}</td>
+                                        <td>{{ \App\Admin\Post::dateTimeFormat($item->created_at) }}</td>
                                         <td>
-                                            <a class="{{ config('settings.admin.button.edit.class') }}" href="{{ \App\Admin\PostCategory::editUrl($item->id) }}">{!! config('settings.admin.button.edit.icon') !!}</a>
-                                            <a  class="{{ config('settings.admin.button.delete.class') }}" onclick="AdminActions.confirmDelete('{{ \App\Admin\PostCategory::deleteUrl($item->id) }}')">{!! config('settings.admin.button.delete.icon') !!}</a>
+                                            <a class="{{ config('settings.admin.button.edit.class') }}" href="{{ \App\Admin\Post::editUrl($item->id) }}">{!! config('settings.admin.button.edit.icon') !!}</a>
+                                            <a  class="{{ config('settings.admin.button.delete.class') }}" onclick="AdminActions.confirmDelete('{{ \App\Admin\Post::deleteUrl($item->id) }}')">{!! config('settings.admin.button.delete.icon') !!}</a>
                                         </td>
                                     </tr>
                                 @endforeach

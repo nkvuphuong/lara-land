@@ -16,8 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label for="displayStatusInput">{{ __('admin/global.display_status') }}</label>
-                            <select class="form-control" name="display_stat
-                            us" id="displayStatusInput">
+                            <select class="form-control" name="display_status" id="displayStatusInput">
                                 <option value="">{{ __('global.all') }}</option>
                                 @include('admin.layouts.inputs.display-status-options')
                             </select>
